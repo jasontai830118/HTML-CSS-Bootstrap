@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background:palevioletred;
+        margin:10px;
+        transition: 0.5s;
+        float: left;
+    }
+    .wrap{
+        /* width: 200px;
+        height: 200px; */
+        border: black 1px solid;
+        margin: 10px;
+        float: left;
+    }
+    .wrap .box{
+        margin: 0px;
+    }
+    .translatex:hover{
+        transform: translateX(20px);
+    }
+    .translatey:hover{
+        transform: translatey(20px);
+    }
+    .translate:hover{
+        transform: translate(20px,20px);
+    }
+    .rotate{
+        transform-origin: right bottom ;
+    }
+    .rotate:hover{
+        transform: rotate(360deg);
+    }
+    .scale:hover{
+        transform: scale(1.2);
+    }
+    .scale2:hover .box{
+        transform: scale(0.6);
+    }
+    .scale3 .box{
+        transform: scale(0);
+    }
+    .scale3:hover .box{
+        transform: scale(1.2);
+    }
+
+    .skew:hover{
+        transform: skew(-12deg);
+    }
+    .skew:hover span{
+        transform: skew(12deg);
+        display: block;
+    }
+    .rotate2:hover{
+        transform: rotate(360deg) scale(1.2) ;
+    }
+    .matrix:hover{
+        transform: matrix(1.2,-1,-1,1.2,-1,-1);
+    }
+
+
+
+    .bigbox{
+        width: 400px;
+        height: 400px;
+        margin: 40px;
+        float: left ;
+        transition: 0.5s;
+    }
+    .box2{
+        width: 200px;
+        height: 200px;
+        background:rgb(65, 163, 255);
+        transition: 0.5s;
+        float: left;
+    }
+
+
+    .bigbox:hover {
+        transform: rotate(480deg);
+    }
+
+    .bigbox:hover .tran1{
+        transform: translate(-20px,-20px);
+    }
+    .bigbox:hover .tran2{
+        transform: translate(20px,-20px);
+}
+    .bigbox:hover .tran3{
+        transform: translate(-20px,20px);
+}
+    .bigbox:hover .tran4{
+        transform: translate(20px,20px);
+}
+    </style>
+</head>
+<body>
+    <div class="box translatex">translatex</div>
+    <div class="box translatey">translatey</div>
+    <div class="box translate">translate</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="wrap scale2">
+        <div class="box">scale</div>
+    </div>
+    <div class="wrap scale3">
+        <div class="box">scale</div>
+    </div>
+        
+    <div class="box skew"><span>skew</span></div>
+    
+    <div class="box rotate2">rotate2</div>
+    
+    <div class="box matrix">matrix</div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="bigbox">
+        <div class="box2 tran1"></div>
+        <div class="box2 tran2"></div>
+        <div class="box2 tran3"></div>
+        <div class="box2 tran4"></div>
+    </div>
+</html>

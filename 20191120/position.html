@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position</title>
+    <style>
+    
+    body{
+        height: 2000px;
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color:lightskyblue ;
+        /* position: static; */
+        position: relative;
+        left: 20px;
+        top: 20px;
+        /* right: 20px; */
+        /* bottom: 20px; */
+        z-index: 2;
+    }
+    .box_absolute{
+        width: 100px;
+        height: 100px;
+        background-color: lightpink;
+        position: absolute;
+        /* left: 20px;
+        top: 20px; */
+        right: 20px;
+        bottom: 20PX;
+        z-index: 11;
+    }
+    .box_fixed{
+        width: 100px;
+        height: 100px;
+        background-color: lightgreen;
+        position: fixed;
+        left: 20px;
+        /* top: 20px; */
+        /* right: 20px; */
+        bottom: 20pX;
+    }
+    .box_wrap{
+        width: 500px;
+        height: 500px;
+        border:black 1px solid ;
+        position: relative;
+    }
+    ul{
+        list-style: none;
+    }
+    ul li{
+        border: black 1px solid;
+        width: 180px;
+        height: 120px;
+        position: relative;
+        float: left;
+        margin: 10px;
+    }
+    .badge{
+        background: blue;
+        width:35px;
+        height: 80px;
+        position: absolute;
+        right: 20px;
+        top: -10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box_absolute">absolute</div>
+    <div class="box">relative</div>
+    <div class="box_fixed">fixed</div>
+    <div class="box_wrap">
+            <div class="box_absolute">
+                absolute
+                <div class="box_absolute">
+                        absolute
+                        <div class="box_absolute">
+                                absolute
+                                <div class="box_absolute">
+                                        absolute
+                                </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+    <ul>
+        <li class="card">
+            card
+            <div class="badge"></div>
+        </li>
+        <li class="card">
+        card
+            <div class="badge"></div>
+        </li>
+        <li class="card">
+                card
+                <div class="badge"></div>
+            </li>
+            <li class="card">
+                    card
+                    <div class="badge"></div>
+                </li>
+                <li class="card">
+                        card
+                        <div class="badge"></div>
+                    </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>opacity</title>
+<style>
+.card{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.map_wrap{
+    width: 500px;
+    position: relative;
+}
+.map{
+    width: 500px;
+    height: 300px;
+    background: url(map.png);
+    background-size: cover;
+    opacity: 1;
+    transition: 0.5s;
+}
+.map_wrap:hover .map{
+    opacity: 0.4;
+}
+.gra1{
+    background: linear-gradient(rgb(252, 84, 84),purple);
+    }
+h2{
+    /* opacity: 0.5; */
+    position: absolute;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .2),rgba(0, 0, 0,.8));
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    transition: 0.5s;
+    transform: translateY(50px);
+  }
+.map_wrap:hover h2{
+    /* opacity: 1; */
+    /* bottom: 0px; */
+    transform: translateY(0px);
+}
+</style>
+</head>
+<body>
+    <div class="card">
+    <div class="map_wrap">
+        <div class="map"></div>
+        <h2>123456789</h2>
+    </div>
+    </div>  
+    <!-- <div class="test">
+        <div></div>
+        <h1></h1>
+    </div> -->
+</body>
+</html>

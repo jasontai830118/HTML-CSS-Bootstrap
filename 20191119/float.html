@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html</title>
+<style>
+
+img{
+    width: 200px;
+    float:right ;
+}
+
+.wrapper{
+    background-color: chartreuse;
+    margin: auto;
+    width: 640px;
+}
+.clear{
+    clear: both;
+}
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height:0;
+    }
+    .content::after{
+        content: '45';
+    }
+    .content::before{
+        content: '0';
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <img src="images/tw.jpg" alt="">
+            
+        臺灣是位於東亞、太平洋西北側的島嶼，地處琉球群島與菲律賓群島之間，西隔臺灣海峽與中國大陸相望，周圍海域從3點鐘方向以順時鐘排序分別為太平洋
+    <!-- <div class="clear"></div> -->
+    </div>
+    <div class="content">123</div>
+</body>
+</html>

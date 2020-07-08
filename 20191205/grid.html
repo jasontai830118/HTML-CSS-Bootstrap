@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing:border-box
+    }
+    .wrapper{
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        background: lightblue;
+        padding: 10px;
+        display: grid;
+        /* grid-template-columns: auto 1fr 2fr 0.5fr; */
+        /* grid-template-columns:repeat(4, 1fr); */
+        grid-template-columns:repeat(4, auto);
+        grid-template-rows: repeat(4, auto) ;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-content:space-around ;
+        /* align-content:space-around; */
+    }
+    .item{
+            padding: 10px;
+            background: rgb(98, 148, 255);
+            border: 1px solid blueviolet;
+    }
+    .item4{
+        align-self: flex-start;
+        justify-self: flex-end;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+        <div class="item item6">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+    </div>
+
+</body>
+</html>

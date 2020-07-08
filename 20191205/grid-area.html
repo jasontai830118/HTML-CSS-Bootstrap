@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/20191205/css/normalize.css">
+<style>
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 'header header header header'
+    'nav nav nav nav'
+    'main main main aside'
+    'footer footer footer footer';
+    font-size: 24px;
+    text-align: center;
+}
+header{
+    background: lightgrey;
+    grid-area: header;
+}
+header img{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    background: lightblue;
+    grid-area: nav;
+}
+.mainmenu{
+    background: #3a589e;
+
+}
+.mainmenu ul{
+    display: flex;
+    /* margin: 0 auto; */
+    padding: 0px;
+}
+.mainmenu li{
+    list-style: none;
+    /* margin: 0 auto; */
+}
+.mainmenu a{
+    color: #FFF;
+    display: block;
+    text-decoration: none;
+    padding: 10PX 20PX;
+}
+.mainmenu a:hover{
+    background-color:#1f3b7e;
+}
+.mainmenu li.current a{
+    background-color:#1f3b7e;
+}
+
+main{
+    background:lightcyan;
+    grid-area: main;
+}
+
+@keyframes walk{
+        0%{
+            background-position: left;
+        }
+        100%{
+            background-position: -3150px;
+        }
+    }
+.cat{
+    margin: 0px auto;
+    width: 350px;
+    height: 380px;
+    background: url(images/cat.png) left;
+    animation: walk 0.5s infinite steps(9);
+}   
+.cat:hover{
+    animation-duration: 0.2s;
+}
+.cat:active{
+    animation-play-state:paused;
+}    
+aside{
+    background: lightpink;
+    grid-area: aside;
+    font-size: 20px;
+    
+}
+footer{
+    background: lightseagreen;
+    grid-area: footer;
+    text-align: left;
+    font-size: 20px;
+    }
+.footer a{
+    text-decoration: none;
+    color:royalblue;
+}
+.m0{
+    margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .wrapper{
+    max-width: 767px;
+    margin: 0 auto;
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 'header header header'
+    'nav nav nav'
+    'main main main'
+    'aside aside aside'
+    'footer footer footer'; */
+    display: block;
+    font-size: 24px;
+}
+.mainmenu li{
+        flex-grow: 1;
+        flex-basis: 0px;
+        text-align: center;
+        /* width: 35px; */
+}
+.mainmenu a{
+    padding: 10PX 0PX;
+}
+
+
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <img src="/20191205/images/long-hair.jpg" alt="">
+    </header>
+    <nav class="mainmenu">
+            <ul class="wrapper">
+                    <li class="current"><a href="">Home</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Story</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About</a></li>
+            </ul>
+    </nav>
+    <main>
+        <div class="cat"></div>
+    </main>
+    <aside>
+    <p  class="m0">The cat (Felis catus) is a small carnivorous mammal.[1][2] It is the only domesticated species in the family Felidae and often referred to as the domestic cat to distinguish it from wild members of the family.[4] The cat is either a house cat or a farm cat, which are pets, or a feral cat, which ranges freely and avoids human contact.[5] House cats are valued by humans for companionship and for their ability to hunt rodents. About 60 cat breeds are recognized by various cat registries</p>
+    </aside>
+    <footer>
+        
+        <div class="footer"> 
+         Template by <a href="" class="endname">
+            OS Templates</a>
+        </div>    
+                    
+        <div class="footer">
+           Copyright © 2018 - All Rights Reserved -    <a href="" class="endname">Domain Name</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

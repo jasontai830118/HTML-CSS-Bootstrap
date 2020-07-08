@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>HAIR-a</title>
+<style>
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background: rgb(240, 240, 240);
+}
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+h1, h3{
+    color: white;
+    margin: 5px 0;
+    /* padding: 0; */
+}
+.header{
+    height: 70px;
+    color: rgb(190, 190, 190);
+    margin: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.headbg{
+    background: white;
+    height: 70px;
+}
+.li-img1 img{
+    height: 46px;
+}
+
+.li-img2{
+    height: 56px;
+    width: 56px;
+}
+
+/* .li-img2 img{
+    height: 56px;
+} */
+.header ul{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+.li-word a{
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+    /* font-weight: bold; */
+    display: block;
+    padding: 26px 15px;
+    /* background: darkblue; */
+    flex-basis: 0px;
+    text-align: center;
+}
+.li-img1 a{
+    display: block;
+    padding: 10px 15px;
+}
+/* .li-img2 a{
+    display: block;
+    padding: 5px 15px;
+} */
+.li-img2 a{
+    display: block;
+    padding: 35px 15px;
+    background: url(/20191205/pics_1129/setting.png)center center;
+}
+.header a:hover{
+    background: rgba(248, 130, 203,0.2);
+}
+.bannerbg0{
+    background: rgb(0, 0, 0);
+    min-height:50vh;
+    border: solid 1px rgb(17, 0, 248);
+}
+.li-img2 a:hover{
+    background: url(/20191205-2/pics_1129/setting_h.png)center center;
+    }
+.bannerbg{
+    border: solid 1px greenyellow;
+    background: rgba(0,0,0,0.6);
+    background: url(/20191205-2/images/long-hair.jpg) center center;
+    background-size: cover;
+    /* opacity: 0.6; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.banner-img{
+    height: 150px;
+    margin: 50px 0 20px;
+}
+.banner-img img{
+    height: 100%;
+}
+.search{
+    width: 400px;
+    border: 1px solid palevioletred;
+    margin: 20px auto;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.search img{
+    height: 100%;
+    vertical-align: middle;
+    }
+.banner-select {
+    font-size: 14px; /*文字大小*/
+    color: rgb(255, 255, 255); /*文字顏色*/
+    background-color: rgba(0,0,0,0); /*選單背景顏色*/
+    border: none;
+}
+.search a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    /* display: block; */
+    /* background: black; */
+}
+.search-btn{
+    background: palevioletred;
+    padding: 0 5px;
+    }
+/* .banner{
+    
+} */
+.banner-menu ul{
+    display: flex;
+    justify-content: center;
+}
+</style>
+</head>
+<body>
+    <header class="wrapper headbg">
+        <div class="header">
+                <ul class="">
+                    <li class="li-img1"><a href=""><img src="/20191205-2/pics_1129/logo.png" alt=""></a></li>
+                    <li class="li-word"><a href="">找髮型</a></li>
+                    <li class="li-word"><a href="">找設計師</a></li>
+                    <li class="li-word"><a href="">美髮誌</a></li>
+                </ul>
+                <ul class="">
+                    <li class="li-word"><a href="">註冊</a></li>
+                    <li class="li-word"><a href="">登入</a></li>
+                    <li class="li-img2"><a href="">
+                        <!-- <img src="/20191205/pics_1129/setting.png" alt=""> -->
+                    </a></li>
+                </ul> 
+        </div>
+    </header>
+    <banner>
+        <div class="wrapper bannerbg0">
+            <div class="wrapper bannerbg">
+                <figure class="banner-img">
+                <img src="/20191205-2/images/logo_icon_w.svg" alt="">
+                </figure>
+                <h1>煩惱髮型嗎</h1>
+                <h3>給你最多髮型靈感及在地優秀設計師</h3>
+                <div class="search">
+                    <a href=""><img src="/20191205-2/pics_1129/icon_searchbar_location.png" alt="">找地圖</a><span>|</span><a class="search-btn" href=""><img src="/20191205-2/pics_1129/icon_searchbar_search.png" alt="">去逛逛</a>
+                    
+                    <a href=""><img src="/20191205-2/pics_1129/icon_searchbar_location.png" alt=""></a>
+                    <select class="banner-select" >
+                                <option>找地圖</option>
+                                <option>台北市</option>
+                                <option>新北市</option>
+                                <option>台中市</option>
+                                <option>台南市</option>
+                                <option>高雄市</option>
+                     </select>
+                
+                </div>
+            </div>
+            <div class="banner-menu">
+                <ul>
+                    <li><a href=""><img src="/20191205-2/pics_1129/icon_search.png" alt=""></a></li>
+                    <li><a href=""><img src="/20191205-2/pics_1129/icon_fashion.png" alt=""></a></li>
+                    <li><a href=""><img src="/20191205-2/pics_1129/icon_book.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </banner>
+    <main>
+<figure></figure>
+    </main>
+
+
+    <bottom>
+
+    <div>
+
+    </div>
+
+    <footer>
+    </footer>
+
+    </bottom>
+</body>
+</html>

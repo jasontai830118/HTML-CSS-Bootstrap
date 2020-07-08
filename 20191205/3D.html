@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    img{
+        width: 250px;
+        transition: 0.5s;
+        margin: 20px;
+        }
+    .translate:hover{
+        transform: translateZ(20px);
+    }
+    .rotate{
+        transform-origin: center bottom ;
+    }
+    .rotate:hover{
+        transform: rotateX(30deg);
+    }
+    .scale:hover{
+        transform: scaley(2);
+    }
+    .camera{
+        /* perspective: 500px; */
+        /* perspective-origin: 500px; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    figure{
+        padding: 0;
+        margin: 20px;
+        perspective: 500px;
+        /* perspective-origin: 20px 50px; */
+        /* transform:rotateY(30deg); */
+    }
+    .flip:hover{
+        transform: rotateY(180deg);
+    }
+    .hidden{
+        backface-visibility: hidden;
+    }
+</style>
+</head>
+<body>
+    <div class="camera">
+    <figure>
+    <img class="translate" src="/20191203/images/dr_strange.jpg" alt="">
+    </figure>
+    <figure>
+    <img class="rotate" src="/20191203/images/dr_strange.jpg" alt="">
+    </figure>
+    <figure>
+    <img class="scale" src="/20191203/images/dr_strange.jpg" alt="">
+    </figure>
+    <figure>
+    <img class="rotate" src="/20191203/images/dr_strange.jpg" alt="">
+    </figure>
+    <figure>
+    <img class="flip" src="/20191203/images/dr_strange.jpg" alt="">
+    </figure>
+    <figure>
+    <img class="flip hidden" src="/20191203/images/dr_strange.jpg" alt="">
+     </figure>
+</div>
+</body>
+</html>

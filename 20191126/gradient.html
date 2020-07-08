@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gradient</title>
+<style>
+.box{
+    height: 200px;
+    margin:10px;
+}
+.gra1{
+    background: linear-gradient(rgb(252, 84, 84),purple);
+    }
+.gra2{
+background: linear-gradient(to top,rgb(252, 84, 84),purple);
+    }
+.gra3{
+background: linear-gradient(160deg,rgba(252, 84, 84),rgb(223, 44, 223),blue,rgb(22, 230, 22));
+    }  
+.gra4{
+background: linear-gradient(160deg,rgba(0,0,0,0.5),rgba(0,0,0,1));
+    }
+.gra5{
+background: linear-gradient(to bottom,rgba(0,0,0,0),
+rgba(0,0,0,0.5)) no-repeat left bottom,url(map.png)center center;
+background-size: auto 40px, cover;
+    }  
+.gra6{
+background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,purple);
+    } 
+.gra7{
+background: linear-gradient(to right, red 10%,orange 25%,yellow 40%,green 60%,blue 75%, indigo 85%,purple 90%);
+    }  
+.gra8{
+background: linear-gradient(to top, blue 50%,indigo 50%);
+    } 
+.gra9{
+    background: repeating-linear-gradient(to right, red,orange,yellow,green,blue,indigo,purple 25%);
+    } 
+.gra10{
+    background: repeating-linear-gradient(to bottom,blue,rgb(177, 83, 245)20%);
+    height: 500px;
+    } 
+.gra11{
+    background: linear-gradient(to bottom,blue,rgb(177, 67, 255));
+    height: 500px;
+    background-size: auto 100px;
+    } 
+.gra12{
+    background: radial-gradient(circle,red,yellow);
+    width: 200px;
+    } 
+.gra13{
+    background: radial-gradient( 60% 70%,red,orange,yellow);
+    } 
+.gra14{
+    background: radial-gradient(circle at 50% 100%,red,yellow);
+    } 
+.gra15{
+    background: repeating-radial-gradient( circle, rgb(47, 0, 156),rgb(40, 40, 204) 8%,rgb(92, 162, 255) 16%,rgb(108, 207, 253) 25%);
+    } 
+.gra16{
+    background: repeating-radial-gradient( circle,  rgb(47, 0, 156),rgb(40, 40, 204)8%,rgb(92, 162, 255)  16%,rgb(108, 207, 253)25%);
+    
+}
+.gra17{
+    background: radial-gradient(circle at 50% 100%,red,yellow);
+    } 
+h1{
+    font-size: 72px;
+    background: radial-gradient( 60% 70%,red,orange,yellow);
+    color:transparent;
+    background-clip: text;
+    -webkit-background-clip:text;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+</style>
+</style>
+</head>
+<body>
+    <div class="box gra1"></div>
+    <div class="box gra2"></div>    
+    <div class="box gra3"></div>
+    <div class="box gra4"></div>
+    <div class="box gra5"></div>
+    <div class="box gra6"></div>
+    <div class="box gra7"></div>
+    <div class="box gra8"></div>
+    <div class="box gra9"></div>
+    <div class="box gra10"></div>
+    <div class="box gra11"></div>
+    <div class="box gra12"></div>
+    <div class="box gra13"></div>
+    <div class="box gra14"></div>
+    <div class="box gra15"></div>
+    <div class="box gra16"></div>
+    <h1>123456</h1>
+</body>
+</html>

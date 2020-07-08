@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet">
+    <title>HAIR-a</title>
+<style>
+    :root{
+            --maincolor:palevioletred;
+    }
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background: rgb(255, 255, 255);
+}
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6{
+    color: white;
+    margin: 5px 0;
+    /* padding: 0; */
+}
+h1{
+    font-size: 40px;
+}
+h3{
+    font-family: 'Noto Serif TC', serif;
+}
+.header{
+    height: 70px;
+    color: rgb(190, 190, 190);
+    margin: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.headbg{
+    background: white;
+    height: 70px;
+}
+.li-img1 img{
+    height: 46px;
+}
+
+.li-img2{
+    height: 56px;
+    width: 56px;
+}
+
+/* .li-img2 img{
+    height: 56px;
+} */
+.header ul{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+.li-word a{
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+    /* font-weight: bold; */
+    display: block;
+    padding: 26px 15px;
+    /* background: darkblue; */
+    flex-basis: 0px;
+    text-align: center;
+    transition: 0.5s;
+}
+.li-img1 a{
+    display: block;
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+/* .li-img2 a{
+    display: block;
+    padding: 5px 15px;
+} */
+.li-img2 img{
+    display: none;
+}
+.li-img2 a{
+    display: block;
+    padding: 35px 15px;
+    background: url(/20191205/pics_1129/setting.png)center center no-repeat;
+    transition: 0.5s;
+}
+.header a:hover{
+    background: rgba(248, 130, 203,0.2);
+}
+.li-img2 a:hover{
+    background: url(/20191205-2/pics_1129/setting_h.png)center center no-repeat;
+    }
+@media screen and (max-width:768px){
+    h1{
+        color:rgb(40, 250, 162);
+        background:rgb(3, 112, 76) ;
+        }
+    .li-word a{
+    display: none;
+    }
+    li.li-img2{
+        width: 30px;
+        height: 30px;
+    }
+    .li-img2 img{
+    display:flex;
+    }
+    .li-img2 a{
+    display: block;
+    width: 80px;
+    margin: 0 0px 0 -40px;
+    padding: 19px 10px 19px 20px;
+    background: url(/20191205/pics_1129/menu_g.svg)center center;
+    transition: 0.5s;
+    }
+    .li-img2 a:hover{
+    display: block;
+    background: url(/20191205/pics_1129/menu_g.svg)center center;
+    background: rgba(248, 130, 203,0.2);
+    }
+
+}
+.bannerbg0{
+    background: rgb(0, 0, 0);
+    /* min-height:50vh; */
+    /* border: solid 1px rgb(83, 80, 122); */
+}
+.bannerbg{
+    /* border: solid 1px greenyellow; */
+    background: rgba(0,0,0,0.6);
+    background: url(/20191205-2/images/long-hair-70.svg) center center;
+    background-size: cover;
+    /* opacity: 0.9; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    }
+.banner-img{
+    height: 120px;
+    margin: 80px 0 10px;
+}
+.banner-img img{
+    height: 100%;
+}
+.search{
+    max-width: 450px;
+    border: 1px solid var(--maincolor);
+    margin: 25px auto 30px;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.search img{
+    /* height: 100%; */
+    vertical-align: middle;
+    }
+.search a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    /* display: block; */
+    /* background: black; */
+}
+.banner-select {
+    font-size: 14px; /*文字大小*/
+    color: rgb(255, 255, 255); /*文字顏色*/
+    background-color: rgba(0,0,0,0); /*選單背景顏色*/
+    font-family: 'Noto Sans TC', sans-serif;
+    border: none;
+    padding: 5px 5px;
+}
+.banner-select:focus option{
+        color: rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+}
+.search-key{
+        border: none;
+        background: none;
+        padding: 7.5px 25px 7.5px 30px;
+        margin: 0px 5px ;
+        border-left: 1px solid var(--maincolor);
+        font-family: 'Noto Sans TC', sans-serif;
+        color: white;
+    }
+.search-btn{
+    background: var(--maincolor);
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    padding: 5px;
+    border: none;
+    /* padding: 0 5px; */
+    transition: 0.5;
+}
+.search-btn:hover{
+    opacity: 0.8;
+}
+.banner-menu{
+    /* height: 300px; */
+}
+.banner-menu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0 30px 0;
+    margin: 0px 80px;
+}
+.banner-menu li{
+    display: block;
+    max-width: 130px;
+    text-align: center;
+    /* border: 1px solid rgb(255, 255, 255); */
+    padding: 5px 0 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;　
+    line-height: 20px;　　　     
+}
+.banner-menu img{
+    max-width: 80px;
+    height: 80px;
+    margin: 10px 25px;
+}
+.banner-menu a{
+    display: block;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    /* padding: 5px; */
+    margin: 0;
+    /* cursor: default; */
+}
+.banner-menu .rwd_show{
+        display: none;
+        }
+.banner-menu li:hover{
+    /* background: rgb(41, 41, 41); */
+    filter:drop-shadow(0px 0px 15px var(--maincolor));
+    }
+    @media screen and (max-width:768px){
+    .banner-img{
+    height: 140px;
+    margin: 60px 0 10px;
+    }
+    .banner-menu ul{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    padding: 20px 0 30px 0;
+    margin: 0px 80px;
+    }
+    .banner-menu li{
+    display: block;
+    max-width: 180px;
+    margin: 20px auto;
+    font-size: 24px;
+    }
+    .banner-menu img{
+    max-width: 120px;
+    height: 120px;
+    margin: 10px 25px;
+    }
+    .banner-menu .rwd_hide{
+        display: none;
+    }
+    .banner-menu .rwd_show{
+        display:block;
+    }
+    }
+.board{
+        text-align: center;
+        font-size: 18px ;
+        margin-bottom: 80px;
+        /* display: flex; */
+        cursor: default;
+}
+.board-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.board h2{
+    color: black;
+    margin: 40px auto 5px;
+}
+.board .underline{
+    background: black;
+    width: 40px;
+    height: 3px;
+    margin: 0px auto 30px;
+}
+.board-outbox1{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.box1{
+    max-width: 160px;
+    height: 240px;
+    background: black;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.box1 img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.midbox1{
+    position: relative;
+    background: black;
+}
+.board-textbox1{
+    width: 100px;
+    height: 22px;
+    border: 1px solid var(--maincolor);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--maincolor);
+    font-size: 16px;
+    align-self: center;
+    position:absolute;
+    top:200px;
+    right: -10px;
+    cursor: default;
+    transition: 0.5s;
+}
+.board-outbox2{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.box2{
+    max-width: 300px;
+    height: 200px;
+    background: black;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.box2 img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.midbox2{
+    position: relative;
+    background: black;
+}
+.board-textbox2{
+    font-size: 16px;
+    position:absolute;
+    top:85px;
+    left: 10px;
+    text-shadow: black 2px 2px 2px;
+    cursor: default;
+}
+.board-textbox2 a{
+    text-decoration: none;
+}
+.more-btn{
+    background: var(--maincolor);
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    padding: 0px 15px;
+    margin: 0px;
+    position: absolute;
+    right: 65px;
+    top: 250px;
+    transition: 0.5s;
+}
+.more-btn2{
+    background: var(--maincolor);
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    padding: 0px 15px;
+    margin: 0px;
+    position: absolute;
+    right: 65px;
+    top: 210px;
+    transition: 0.5s;
+}
+.more-btn h4,.more-btn2 h4{
+    margin: 3px 0px;
+}
+.more-btn a,.more-btn2 a{
+    text-decoration: none;
+}
+.more-btn:hover ,.more-btn2:hover{
+    background: deepskyblue;
+    filter: drop-shadow(1px 1px 1px black);
+}
+/* .box1:hover, .box2:hover{
+    opacity: 0.8;
+}
+.board-textbox2:hover {
+    opacity: 0.8;
+} */
+.midbox1:hover .box1{
+    opacity: 0.8;
+    }
+.midbox1:hover .board-textbox1,.board-textbox1:hover{
+    background: rgba(0, 0, 0, 0.473);
+}
+
+.midbox2:hover .box2 , .midbox2:hover .board-textbox2{
+    opacity: 0.8;
+}
+/* 這裡開始是底部 */
+
+.bottom{
+    background: rgb(233, 233, 233);
+    /* height: 500px; */
+    /* margin: 10px 0; */
+    padding: 5px 0;
+    text-align: center;
+}
+.bottom h2{
+    color: black;
+}
+.bottom h5{
+    color: rgb(109, 109, 109);
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+.bottom h6{
+    color: var(--maincolor);
+    text-align: left;
+    font-size: 14px;
+    padding: 0px 0;
+    /* margin: 0px; */
+}
+.bottom-top{
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+.bottom-top-left{
+    max-width: 180px;
+    height: 100%;
+}
+.bottom-top-left img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.bottom-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 80px 0px 0px ;
+}
+.bottom-top .underline{
+    background: black;
+    width: 40px;
+    height: 3px;
+    margin: 0px auto 30px;
+}
+.app-btn1 .app-btn2{
+    max-width: 135px;
+    height: 100px;
+    background: black;
+}
+.app-btn1 a{
+    display: block;
+    background: url(/20191205-2/pics_1129/btn_app_ios.png)center center no-repeat;
+    padding: 20px 67.5px;
+    margin: 1px;
+    transition:0.5s;
+}
+.app-btn2 a{
+    display: block;
+    background: url(/20191205-2/pics_1129/btn_app_android.png)center center no-repeat;
+    padding: 20px 67.5px;
+    margin: 0px;
+    transition:0.5s;
+}
+.app-btn1 a:hover{
+    background: url(/20191205-2/pics_1129/btn_app_ios_h.png)center center;
+}
+.app-btn2 a:hover{
+    background: url(/20191205-2/pics_1129/btn_app_android_h.png)center center;
+}
+.app-btn-box{
+    height: 60px;
+    display: flex;
+    align-content: space-between;
+    justify-content:space-evenly;
+}
+.bottom-mid{
+    background: black;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.bottom-mid img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    opacity: 0.4;
+}
+.bottom-mid-text{
+    display: flex;
+    position: absolute;
+    /* left: 270px; */
+    top:0%; 
+    left:50%;
+    margin: 0 0 0 -200px;
+    cursor: default;
+    letter-spacing: 1px;
+}
+.bottom-mid h3{
+    font-size: 64px;
+    font-family: 'Noto Serif TC', serif;
+}
+.bottom-mid h4{
+    font-size: 16px;
+    font-family: 'Noto Serif TC', serif;
+}
+.bottom-textleft{
+    /* margin: 50px; */
+    padding: 30px 50px 0px;
+}
+.bottom-textright{
+    margin: 0;
+    padding: 30px 0 0px;
+}
+.textborder{
+    border-left: 1px white dotted;
+    padding: 0 50px 0 50px;
+}
+.bottom-mid-bottom{
+    display: flex;
+    position:absolute;
+    /* top: 180px; */
+    /* left: 226px; */
+    top:75%;
+    left: 50%;
+    margin: 0 0 0 -215px;
+    cursor: default;
+}
+.bottom-title2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 1px;
+    /* margin: 30px 80px 0px 0px ; */
+}
+.bottom-title2 .underline{
+    background: rgb(255, 255, 255);
+    width: 40px;
+    height: 3px;
+    margin: 0px auto 0px;
+}
+.bottom-mid-bottom h3{
+    font-size: 24px;
+}
+.bottom-mid-bottom h5{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    padding: 6px;
+}
+.bottom-mid-btn1{
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0px 20px;
+    padding: 0px 26px;
+    transition: .5s;
+}
+.bottom-mid-btn2{
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0px 10px;
+    padding: 0px 10px;
+    transition: .5s;
+}
+.bottom-mid-bottom a{
+    text-decoration: none;
+}
+.bottom-mid-btn1:hover, .bottom-mid-btn2:hover{
+    background: rgba(255, 255, 255, 0.9);
+}
+footer{
+    text-align: center;
+    margin-top: 30px;
+}
+footer  h5{
+    margin: 0;
+}
+.footer h6{
+    margin: 0;
+    color: rgb(109, 109, 109);
+    font-size: 12px;
+    font-family: 'Noto Serif TC', serif;
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+}
+.footer-top-text{
+    max-width: 400px;
+    margin: 0 20px;
+    line-height: 18px;
+    display: flex;
+}
+.footer-top-text figure{
+    margin: 0;
+}
+.footer-top-text img{
+    width: 40px;
+    height: 40px;
+}
+.lite-btn3 h6{
+    margin: 0 auto;
+    padding: 3px 0 0 0;
+}
+.lite-btn3{
+    display: flex;
+    flex-direction: row;
+}
+.lite-btn3 img{
+    width: 19px;
+    /* height: 100%; */
+}
+.lite-btn3-box{
+    width: 75px;
+    height: 20px;
+    margin: 1px 7px;
+    /* background: rgba(100, 148, 237, 0.322); */
+    overflow: hidden;
+    transition: .5s;
+}
+.lite-btn3-box a{
+    text-decoration: none;
+    /* margin: 20px; */
+    color:rgb(199, 199, 199);
+}
+.lite-btn3-bigbox{
+    max-width: 180px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5px 0 0px;
+}
+.lite-btn3-box:hover{
+    opacity: 0.8;
+}
+.join-btn-outbox{
+    overflow: hidden;
+}
+.join-btn-outbox a{
+    text-decoration: none;
+}
+.join-btn{
+    background:url(/20191205-2/pics_1129/btn_join.png)
+    no-repeat;
+    padding: 0;
+    transition: .5s;
+}
+.join-btn:hover{
+    background:url(/20191205-2/pics_1129/btn_join_h.png)
+    no-repeat;
+}
+.join-btn h6{
+    margin:  0 0 0 0; 
+    padding: 12px 10px 15px 50px ;
+    color: var(--maincolor);
+    font-size: 14px;
+}
+.footer-bottom{
+    max-width:880px;
+    border-top: 2px solid rgb(109, 109, 109);
+    padding: 15px 0;
+    margin: 40px auto 0;
+    cursor: default;
+}
+</style>
+</head>
+<body>
+    <header class="wrapper headbg">
+        <div class="header">
+                <ul class="">
+                    <li class="li-img1"><a href=""><img src="/20191205-2/pics_1129/logo.png" alt=""></a></li>
+                    <li class="li-word"><a href="">找髮型</a></li>
+                    <li class="li-word"><a href="">找設計師</a></li>
+                    <li class="li-word"><a href="">美髮誌</a></li>
+                </ul>
+                <ul class="">
+                    <li class="li-word"><a href="">註冊</a></li>
+                    <li class="li-word"><a href="">登入</a></li>
+                    <li class="li-img2"><a href=""><img src="/20191205-2/pics_1129/menu_g.svg" alt="">
+                        <!-- <img src="/20191205/pics_1129/setting.png" alt=""> -->
+                    </a></li>
+                </ul> 
+        </div>
+    </header>
+    <banner>
+        <div class="wrapper bannerbg0">
+            <div class="wrapper bannerbg">
+                <figure class="banner-img">
+                <img src="/20191205-2/images/logo_icon_w.svg" alt="">
+                </figure>
+                <h1>煩惱髮型嗎</h1>
+                <h3>給你最多髮型靈感及在地優秀設計師</h3>
+                <div class="search">
+                    <a href=""><img src="/20191205-2/pics_1129/icon_searchbar_location.png" alt=""></a>
+                    <select class="banner-select">
+                        <option>找地圖</option>
+                        <option>台北市</option>
+                        <option>新北市</option>
+                        <option>台中市</option>
+                        <option>台南市</option>
+                        <option>高雄市</option>
+                    </select>
+                    <input type="text" class="search-key" value="搜尋髮型主題" onfocus="value=''" onblur="value='搜尋髮型主題'">
+                    <button class="search-btn">
+                        <img src="/20191205-2/pics_1129/icon_searchbar_search.png" alt="search">去逛逛
+                    </button>
+                </div>
+            </div>
+            <div class="banner-menu">
+                <ul>
+                    <a href=""><li><img src="/20191205-2/pics_1129/icon_search.svg" alt="">在地設計師作品輕鬆找</li></a>
+                    <a href=""><li><img src="/20191205-2/pics_1129/icon_fashion.svg" alt="">流行髮型<br>一手掌握</li></a>
+                    <a href=""><li class="rwd_hide"><img src="/20191205-2/pics_1129/icon_book.svg" alt="">即時溝通預約<br>&nbsp;</li><li class="rwd_show"><img src="/20191205-2/pics_1129/icon_book.svg" alt="">即時溝通<br>快速預約</li></a>
+                </ul>
+            </div>
+        </div>
+    </banner>
+    <board class="wrapper">
+        <div class="wrapper board">
+            <div class="board-top">
+                <div class="board-title">
+                <h2>熱門主題</h2>
+                <div class="underline"></div>
+                </div>  
+                <div class="board-outbox1">
+                    <div class="midbox1">
+                        <div class="box1">
+                            <a href="">
+                            <img src="/20191205-2/images/14366_18.jpg" alt=""></a>
+                        </div>
+                        <a href="">
+                        <div class="board-textbox1">男的</div>
+                        </a>
+                    </div>
+                    <div class="midbox1">
+                        <div class="box1">
+                            <a href="">
+                            <img src="/20191205-2/images/9743_2.jpg" alt=""></a>
+                        </div>
+                        <a href="">
+                        <div class="board-textbox1">女的</div>
+                        </a>
+                    </div>
+                    <div class="midbox1">
+                        <div class="box1">
+                            <a href="">
+                            <img src="/20191205-2/images/22736_8.jpg" alt=""></a>
+                        </div>
+                        <a href="">
+                        <div class="board-textbox1">女的</div>
+                        </a>
+                    </div>
+                    <div class="midbox1">
+                        <div class="box1">
+                            <a href="">
+                            <img src="/20191205-2/images/3425_14.jpg" alt=""></a>
+                        </div>
+                        <a href="">
+                        <div class="board-textbox1">男的</div>
+                        </a>
+                    </div>
+                    <div class="more-btn">
+                        <a href=""><h4>more</h4></a>
+                    </div>
+                </div>         
+            </div>
+            <div class="board-bottom">
+            <div class="board-title">    
+            <h2>趨勢話題</h2>
+            <div class="underline"></div>
+            </div>  
+                <div class="board-outbox2">
+                    <div class="midbox2">
+                        <div class="box2">
+                            <a href="">
+                            <img src="/20191205-2/images/138974.jpg" alt=""></a>
+                        </div>
+                        <div class="board-textbox2">
+                            <a href=""> 
+                            <h3>在這裡可以下標題哦~~~!!</h3>
+                            </a>  
+                        </div>
+                    </div>
+                    <div class="midbox2">
+                        <div class="box2">
+                            <a href="">
+                            <img src="/20191205-2/images/141965.jpg" alt=""></a>
+                        </div>
+                        <div class="board-textbox2">
+                            <a href="">
+                            <h3>在這裡可以下標題哦~~~!!</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="midbox2">
+                        <div class="box2">
+                            <a href="">
+                            <img src="/20191205-2/images/128141.jpg" alt=""></a>
+                        </div>
+                        <div class="board-textbox2">
+                            <a href="">
+                            <h3>在這裡可以下標題哦~~~!!</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="more-btn2">
+                        <a href=""><h4>more</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </board>
+    <bottom>
+        <div class="bottom wrapper">
+            <div class="bottom-top">
+                <div class="bottom-top-left">
+                    <img src="/20191205-2/images/phones.png" alt="">
+                </div>
+                <div class="bottom-top-right">
+                    <div class="bottom-title">
+                        <h2>快速找到好髮型</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="app-btn-box">
+                        <div class="app-btn1">
+                            <a href=""></a>    
+                        </div>
+                        <div class="app-btn2">
+                            <a href=""></a>
+                        </div>       
+                    </div>
+                    <h6>下載並註冊後就可以開始發表作品囉!</h6>
+                </div>
+            </div>
+            <div class="bottom-mid">
+                <div class="bottom-midbg">
+                    <img src="/20191205-2/images/3425_14.jpg" alt="">
+                    <div class="bottom-mid-text">
+                        <div class="bottom-textleft">
+                            <h4>已有</h4>
+                            <div>
+                            <h3>635</h3>
+                            <h4>位設計師</h4>
+                            </div>
+                        </div>
+                        <div class="bottom-textright">
+                            <h4>發表</h4>
+                            <div class="textborder">
+                            <h3>6421</h3>
+                            <h4>張髮型作品</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-mid-bottom">
+                            <div class="bottom-title2">
+                                <h3>優秀設計師募集中</h3>
+                                <div class="underline"></div>
+                            </div>
+                            <a href="">
+                                <div class="bottom-mid-btn1">
+                                        <h5>了解更多</h5>
+                                </div>
+                            </a>
+                            <a href="">    
+                                <div class="bottom-mid-btn2">
+                                    <h5>立即免費註冊</h5>  
+                                </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer wrapper">
+                    <div class="footer-top">
+                        <div class="footer-top-text">
+                            <figure>
+                            <img src="/20191205-2/images/logo_icon_g.svg" alt=""></figure>
+                            <h6>HairMap美髮地圖團隊致力於打造出最貼心實用的美髮資訊交流社群，讓美髮時光成為每個人生命中最美好的時刻。</h6>
+                        </div>    
+                        <div>
+                            <div class="lite-btn3-bigbox">    
+                                <div class="lite-btn3-box">
+                                    <a href="">
+                                        <div class="lite-btn3">
+                                            <img src="/20191205-2/images/email.svg" alt="">
+                                            <h6>連絡我們</h6>
+                                        </div>
+                                    </a>
+                                </div>  
+                                <div class="lite-btn3-box">
+                                    <a href="">
+                                        <div class="lite-btn3">
+                                            <img src="/20191205-2/images/ios.svg" alt="">
+                                            <h6>iOS</h6>
+                                        </div>
+                                    </a>
+                                </div>  
+                                <div class="lite-btn3-box">
+                                    <a href="">
+                                        <div class="lite-btn3">
+                                            <img src="/20191205-2/images/facebook_g.svg" alt="">
+                                            <h6>粉絲專業</h6>
+                                        </div>
+                                    </a>
+                                </div>  
+                                <div class="lite-btn3-box">
+                                    <a href="">
+                                        <div class="lite-btn3">
+                                            <img src="/20191205-2/images/android.svg" alt="">
+                                            <h6>Andriods</h6>
+                                        </div>
+                                    </a>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="join-btn-outbox">
+                            <a href="">
+                                <div class="join-btn">
+                                    <h6>設計師加入</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <h5>Hairdodo Inc. &copy; 2016. All Rights Reserved 使用者條款與隱私權政策</h5>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </bottom>
+</body>
+</html>

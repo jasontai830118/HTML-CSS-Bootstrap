@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex layout</title>
+    <link rel="stylesheet" href="css/normalize.css">
+
+<style>
+body{
+    background: #e9ebef;
+}
+a, a:link{
+    color:#3a589e ;
+    text-decoration: none;
+}
+a:hover{
+    color:#1f3b7e ;
+    text-decoration: none;
+}
+header{
+    background: white;
+}
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+header .wrapper{
+    display: flex;
+    justify-content:space-between;
+    height: 80px;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}
+.logo{
+    /* width: 200px */
+    height: 50px;
+}
+.logo2{
+    width: 100%;
+    height: 100%;
+    border: rgb(201, 201, 201) 1px solid; 
+    border-radius: 5px;
+    }
+.inout{
+    align-self: flex-start;
+    margin-top: 10px;
+}
+.mainmenu{
+    background: #3a589e;
+
+}
+.mainmenu ul{
+    display: flex;
+    /* margin: 0 auto; */
+    padding: 0px;
+}
+.mainmenu li{
+    list-style: none;
+    /* margin: 0 auto; */
+}
+.mainmenu a{
+    color: #FFF;
+    display: block;
+
+    padding: 10PX 20PX;
+}
+.mainmenu a:hover{
+    background-color:#1f3b7e;
+}
+.mainmenu li.current a{
+    background-color:#1f3b7e;
+}
+.main-content{
+    display: flex;
+    margin: 20px  auto;
+}
+.left-aside{
+    width: 160px;
+    margin: 0 10px 0 0px;
+}
+.right-aside{
+    width: 160px;
+    margin: 0 10px 0 0 ;
+    /* height: 100vh; */
+}
+main{
+    /* flex-grow: 0; */
+    margin: 0 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    border-right: 1px solid rgb(201, 201, 201);
+    display: block;
+}
+main p{
+    height: 500px;
+    line-height: 1.7;
+    margin: 5px;
+}
+h2{
+    margin: 10px 0;
+    }
+.left-aside figure{
+    width: 160px;
+    height: 160px;
+    margin: 0 0 20px 0px;
+}
+.submenu{
+    /* padding: 0px; */
+}
+.submenu ul{
+    padding: 0px;
+} 
+.submenu li{
+    list-style: none;
+
+    
+}
+.submenu a{
+    color: #4b4f56;
+    display: block;
+    padding: 10px;
+    margin: 0 0 0px 0px;
+    border-left:solid transparent 4px ;
+    /* flex-direction: column; */
+    /* justify-content:; */
+}
+.submenu li.current a{
+    background:#dddfe2;
+    font-weight: bold;
+    border-left:solid #3a589e 4px ;
+}
+.submenu a:hover{
+    background:#dddfe2;
+    font-weight: bold;
+    border-left:solid #3a589e 4px ;
+}
+.right-aside img{
+    width: 120px;
+    
+}
+footer{
+    padding: 20px 0;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        
+        <img class="logo" src="/20191128/images/facebook.png" alt="">
+         <div class="inout">  
+             <a href="">Log In</a> | <a href="">Sign Up</a>
+        </div>
+
+    </div>
+    </header>
+    <nav class="mainmenu">
+        <ul class="wrapper">
+            <li class="current"><a href="">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper main-content">
+        <aside class="left-aside">
+        <figure>
+        <img class="logo2" src="/20191128/images/logo.jpg" alt="">
+        </figure>
+        <nav class="submenu">
+            <ul>
+                <li class="current"><a href="">首頁</a></li>
+                <li><a href="">關於</a></li>
+                <li><a href="">相簿</a></li>
+                <li><a href="">影片</a></li>
+            </ul>
+        </nav>
+
+        </aside>
+        <main>
+            <article>
+                <h2>FlexBox</h2>
+                <time>2017/5/5 14:00:00</time>
+                <p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
+            </article>
+        </main>
+        <aside class="right-aside">
+            <figure>
+                <img src="/20191128/images/jk.png" alt="">
+            </figure>
+        </aside>
+    </div>
+    <footer>
+        Facebook
+    </footer>
+
+    
+</body>
+</html>

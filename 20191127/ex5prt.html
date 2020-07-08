@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/20191127/fontawesome-free-5.11.2-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Damion&display=swap" rel="stylesheet">
+<style>
+body{
+    background: rgb(206, 206, 206);
+}
+.card{
+    max-width: 320px;
+    min-height: 200px;
+    box-shadow: black 0px 0px 10px;
+    background: white;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    overflow:hidden;
+    border: 1px solid rgb(0, 0, 0);
+    transition: 0.5s;
+
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: black 0px 5px 5px;
+}
+.card:hover h2{
+    letter-spacing: 5px;
+    text-indent: 5px;
+}
+.banner{
+    /* width: 100%; */
+    height: 200px;
+    background: url(light.jpg);
+    background-size: cover;
+}
+.circle{
+        width:150px ;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 -74px auto;
+        overflow: hidden;
+        position: absolute; 
+        top: 110px;
+        right: 50%;
+        transition: 0.5s;
+        background: black;
+}
+.object_cover{
+    width: 100%;
+    object-fit: cover;    
+}
+.circle:hover .icon{
+    opacity: 1;
+}
+.circle:hover .object_cover{
+    opacity: 0.7;
+}
+.icon {
+    font-size: 40px;
+    color: white;
+    z-index: 1;
+    margin: 0 -20px auto;
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.border{
+    border: 20px solid transparent;
+    border-image: url(border-image2.png) 20 round;
+    background: white;
+    background-size: contain;
+}
+.content{
+    border: black 1px solid;
+    padding: 10px;
+    margin: 10px 0px auto;
+}
+.content h2{
+    font-family: 'Damion';
+    font-size: 30px;
+    transition: 0.5s;
+}
+.button{
+    display: block;
+    border: 1px black solid;
+    margin: 5px 10px auto;
+    padding: 10px;
+    background: linear-gradient(rgb(57, 57, 241), rgb(146, 211, 241) );
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px -2px 0px;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: default;
+    position: relative;
+}
+.button2{
+    display: block;
+    border: 1px black solid;
+    margin: 5px 10px auto;
+    padding: 10px;
+    background: linear-gradient(rgb(57, 57, 241), rgb(146, 211, 241) );
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px -2px 0px;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: default;
+    position: absolute;
+    display: block;
+}
+.button:hover{
+    background: linear-gradient( to top,rgb(135, 114, 255), rgb(106, 206, 252) );
+
+}
+</style>
+</head>
+<body>
+    <div class="card">
+        <div class="banner">
+        </div>
+        <figure class="circle">
+            <img class="object_cover" src="/20191126/dr_strange.jpg" alt="">
+            <i class="fas fa-image icon"></i>   
+        </figure>
+        <div class="border">
+            <div class="content">
+            <h2>Dr. Strange</h2>
+            <hr>
+            <h3>Hello, I am Steven Strange</h3>
+            <div>
+                <a class="button" role="button"> Follow Me </a>
+                ::after
+        </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

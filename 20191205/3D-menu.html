@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(earth.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.menu{
+    position: fixed;
+    top: 80px;
+    left: 80px;
+    perspective:500px;
+    /* transform-style: preserve-3d; */
+
+}
+.menu ul{
+    transform: rotateY(20deg);
+    transform-style: preserve-3d;
+    list-style: none;
+}
+.menu li{
+    background: rgba(0,0,0,0.6);
+    border: 1px solid royalblue;
+    text-align: center;
+    /* padding: 20px 30px; */
+    margin: 12px 0;
+    transition: 0.5s;
+
+}
+
+.menu li a , .menu li a:link{
+    display: block;
+    text-decoration: none;
+    color: royalblue;
+    font-weight: bold;
+    padding: 8px 20px;
+    font-size: 20px;
+    cursor: default ;    
+}
+.menu li:hover{
+    background: rgba(7, 86, 233, 0.514);
+    transform: translateZ(20px);
+}
+.menu li:hover a{
+    /* background: rgba(7, 86, 233, 0.514); */
+}
+</style>
+</head>
+
+<body>
+    <nav class="menu">
+    <ul>
+        <li><a href="1">Home</a></li>
+        <li><a href="2">Shop</a></li>
+        <li><a href="3">About</a></li>
+        <li><a href="4">Contact</a></li>
+    </ul>
+    </nav>
+</body>
+
+</html>

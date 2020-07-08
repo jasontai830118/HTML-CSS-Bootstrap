@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>card</title>
+<style>
+body{
+    background: rgb(224, 220, 220);
+}
+.card{
+    border: black 1px solid;
+    width: 250px ;
+    min-height: 100px;
+    box-shadow: black 0px 0px 10px ;
+    border-radius: 5%;
+    margin: 0px auto;
+    text-align: center;
+    /* padding: 20px; */
+    position: relative;
+    overflow: hidden;
+}
+.banner{
+    background: url(light.jpg) top center;
+    height: 160px;
+    background-size:cover;
+    
+    }
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    margin: 0 -49px auto;
+    padding: 0px;
+    position:absolute ;
+    top: 110px;
+    right:50%
+}
+.circle img{
+    width: 100%;
+}
+.box h2{
+    /* scroll-padding-bottom: 0px ; */
+    padding: 0px;
+    border-bottom: 1px solid #ccc
+}
+.border-image1{
+    border: 20px solid transparent;
+    border-image: url(border-image2.png) 20 round;
+    background: white;
+    background-size:contain;    
+    }
+.content{
+    padding: 10px 0px;
+}
+.loading{
+    width: 150px;
+    position: fixed ;
+    left:50%;
+    top:50%;
+    margin: -275px 0 0 -75px; 
+}
+</style>
+</head>
+
+<body>
+
+<div class="card ">
+    <div class="banner">
+    </div>  
+    <figure class="circle">
+            <img src="/20191121/example/images/dr_strange.jpg" alt="">    
+    </figure>
+    <div class="border-image1">
+        <div class="content">
+            <h2>Dr. Strange</h2>
+            <hr>
+            <h5>Hello, I am Steven Strange</h5>
+        </div>
+    </div>
+</div>
+<img src="/20191121/loading.svg" alt="" class="loading">
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>space</title>
+
+<style>
+body{
+    background: url(images/space-bg.jpg);
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg) translateX(calc( -50% - 215px));
+    }
+    100%{
+        transform: rotate(360deg) translateX(calc( -50% - 215px));
+    }
+}
+@keyframes rotate2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    position: relative;
+    margin: 50px auto; 
+    border-radius: 50%;  
+}
+.container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform:translate(-50% , -50%) ; */
+}
+.sun{
+    margin: -64px 0 0 -64px;
+    animation: rotate2 3s linear infinite;
+}
+.earth{
+    animation: rotate 3s linear infinite; 
+    margin: -36px 0 0 -36px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="circle">
+    <img class="sun" src="/20191203/images/sun.png" alt="">
+    <img class="earth" src="/20191203/images/earth.png" alt="">
+    <img class="moon" src="/20191203/images/moon.png" alt="">
+</div>
+</div>
+ <!-- <div class="box">
+    <div class="sun">
+        <div class="earth">
+            <div class="moon">
+
+            </div>
+        </div>
+    </div>
+</div> -->
+</body>
+</html>

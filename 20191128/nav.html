@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav</title>
+<style>
+.wrapper{ background:white;
+    width: 900px;
+    margin: 0 auto;
+    }
+body{
+    background-color: lightgray;
+}
+ul{
+    list-style: none;
+}
+ul, li{
+    margin: 0 auto; 
+    padding: 0;
+ }
+ul>li{
+    background:white;
+    float: left;
+    padding: 0px 0px ;
+    position: relative;
+}  
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height:0;
+    }
+ul li a
+    {text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 20px;
+    }
+ul li a.link:hover{
+    background: rgb(228, 126, 126);
+}
+ul li:hover .submenu{
+    opacity: 1;
+    max-height: 150px;
+}
+/* ul.submenu>li{
+    float: none;
+} */
+
+.submenu{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    max-height: 0 ;
+    overflow: hidden;
+    background: #fff;
+
+}
+
+/* a.link,a.link:link{
+    text-decoration:none;
+    color: rgb(0, 0, 255);
+    padding: 10.5px;
+    background-color: rgb(138, 149, 212);
+    } */
+/* a.link:hover{
+            text-decoration: underline;
+            color: blue;
+            padding: 10.5px;
+            background-color: rgb(138, 149, 212);
+        } */
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="clearfix" >
+                <li><a href="Home" class="link">Home</a>
+                <ul class="submenu ">
+                    <li><a href="">時間</a></li>
+                    <li><a href="">地點</a></li>
+                    <li><a href="">內容</a></li>
+                </ul>
+                </li>
+                
+                <li><a href="About" class="link">About</a>
+                <ul class="submenu">
+                    <li><a href="">時間</a></li>
+                    <li><a href="">地點</a></li>
+                    <li><a href="">內容</a></li>
+                </ul>
+                </li>
+                <li><a href="Album" class="link">Album</a>
+                <ul class="submenu">
+                    <li><a href="">時間</a></li>
+                    <li><a href="">地點</a></li>
+                    <li><a href="">內容</a></li>
+                </ul>
+                </li>
+                
+                <li><a href="Contact" class="link">Contact</a>
+                <ul class="submenu">
+                    <li><a href="">時間</a></li>
+                    <li><a href="">地點</a></li>
+                    <li><a href="">內容</a></li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

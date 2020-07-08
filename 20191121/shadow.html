@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shadow</title>
+<style>
+.box{
+    width: 300px;
+    height: 300px;
+    background: cornflowerblue;
+    margin: 30px;
+    float: left;
+    transition: 1s;
+}
+.box2{
+    width: 300px;
+    height: 300px;
+    background: cornflowerblue;
+    margin: 30px;
+    border-radius: 50%;
+    float: left;
+    transition: 1s;
+    }
+.shadow1{
+    box-shadow: darkblue 10px 10px 20px;
+}
+.shadow2:hover{
+    box-shadow: rgb(10, 10, 189) 10px 10px 30px;
+}
+.shadow3:hover{
+    box-shadow: rgb(10, 10, 189) 10px 10px 30px 10px;
+}
+.shadow4{
+    box-shadow: rgb(10, 10, 189) 10px -20px 30px 10px inset;
+    border-radius: 50%;
+}
+.shadow5{
+    box-shadow: violet 10px 0px 10px, 
+    red -10px 0px 10px, 
+    purple 0px 10px 10px, 
+    orange 0px -10px 10px; 
+}
+.shadow6:hover{
+    box-shadow: violet 10px 0px 20px, 
+    red -10px 0px 20px, 
+    purple 0px 10px 20px, 
+    orange 0px -10px 20px; 
+    border-radius: 50%;
+}
+.shadow7{
+    box-shadow: violet 0px 0px 20px, 
+    red 0px 0px 40px, 
+    purple 0px 0px 60px, 
+    orange 0px 0px 80px; 
+    border-radius: 50%;
+}
+</style>
+</head>
+<body>
+   <div class="box shadow1"></div>
+   <div class="box shadow2"></div>
+   <div class="box shadow3"></div>
+   <div class="box shadow4"></div>
+   <div class="box shadow5"></div>
+   <div class="box2 shadow6"></div>
+   <div class="box2 shadow7"></div>
+</body>
+</html>

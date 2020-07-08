@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex</title>
+    <style>
+    .wrapper{
+        width: 800px;
+        height: 400px;
+        margin: 0 auto;
+        background: lightskyblue;
+        /* display: inline-flex; */
+        display: flex;
+        /* flex-direction: column-reverse; */
+        justify-content:space-evenly;
+        /* align-items: flex-end; */
+        align-content:stretch;
+        /* flex-wrap: wrap; */
+                    }
+    .box{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background: lightpink;
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+        /* flex: 0 1 120px; */
+    }
+    .box1{
+        /* flex-grow: 1; */
+        /* flex-shrink: 3; */
+        /* order: 3; */
+    }
+    .box2{
+        /* flex-grow: 1; */
+        /* order: -2; */
+        /* align-self: center; */
+    }
+    /* .box4{
+        align-self:stretch;
+    }
+    .box5{
+        order: 1;
+    }
+    .box6{
+        order: -1;
+    } */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <!-- <div class="box box3">3</div> -->
+        <!-- <div class="box box4">4</div> -->
+        <!-- <div class="box box5">5</div> -->
+        <!-- <div class="box box6">6</div>    -->
+        <!-- <div class="box box7">7</div>    -->
+    </div> 
+</body>
+</html>

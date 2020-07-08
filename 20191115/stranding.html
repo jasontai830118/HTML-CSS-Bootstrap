@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+     .wrapper{width: 600px;}
+    th, td{border: 1px solid rgb(0, 0, 0) ;
+    padding: 6px;}
+    table{border-collapse:collapse; width: 100%;}
+    thead tr{background: rgb(59, 125, 248);}
+    tbody tr:nth-child(2n){background: rgb(127, 174, 235);}
+    tbody tr:nth-child(2n+1){background: rgb(178, 200, 228);}
+    tfoot tr{background: rgb(164, 228, 240);}
+    .box{
+        /* padding: 25px;
+        margin: 25px;
+        border: 3.5px solid #d83f3f; */
+        background: deepskyblue;
+        /* margin-top 10px;
+        margin-left: 30px;
+        margin-right: 25px;
+        padding-top: 20px;
+        padding-left: 50px; */
+        /* margin: 10px 20px 30px 40px;
+        padding: 10px 30px 20px 10px; */
+        border-left:5px dashed #000000;font-size: 30px;
+        width: 300px;
+        height: 150px;
+        display: inline-block 
+        }
+    .span{
+        background: khaki;
+        margin: 100px 5px;
+        padding: 10px 10px;}
+
+    body{
+        background-image: url("forest.jpg");
+        background-repeat: no-repeat;
+    }
+    .form-row{
+        margin-bottom: 10px;
+        /* border: khaki solid 2px; */
+    }
+        </style>
+    
+</head>
+<body>
+    <center>
+    <div class="wrapper">
+    <table>
+        <caption>time</caption>
+        <thead>
+        <tr>
+            <th>hour</th>
+            <th>minute</th>
+            <th>secend</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>59</td>
+            <td>59</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>7</td>
+        </tr>
+        </tbody>
+        <tfoot> <tr>
+                <!-- <td></td>
+                <td></td> -->
+                <td colspan="3">時間</td>
+        </tr></tfoot>
+    </table>
+    </div>
+    <div class="box">
+        box
+    </div>
+    <span class="span">77777777</span>
+    <span class="span">77777777</span>
+    <span class="span">77777777</span>
+    <form action="receives" method="POST">
+    
+    <div class="form-row" style="margin-top:150px">
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name" placeholder="輸入姓名">
+    </div>
+    <div class="form-row">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div class="form-row">
+        <label for="password">password</label>
+        <input type="password" id="password" name="password"
+        placeholder="請輸入8~12英數混合的密碼">
+    </div>
+    <div class="form-row">
+            <label for="LivingIn">選擇所在地</label>
+            <select name="LivingIn"> 
+                <option value="TPE">台北市</option>
+                <option value="TPH">新北市</option>
+                <option value="TYC">桃園市</option>
+                <option value="HSC">新竹市</option>
+            </select>
+        </div>
+    <div class="form-row">
+        <label for="note">備註</label>
+        <textarea name="note" id="note" cols="25" rows="6">
+        </textarea>
+    </div>
+    <div class="form-row">
+        <input type="radio" name="gender" value="male">男
+        <input type="radio" name="gender" value="female">女
+    </div>
+    <div class="form-row">
+        <input type="checkbox" name="hobby" value="music">音樂
+
+        <input type="checkbox" name="hobby" value="sport">運動
+        
+        <input type="checkbox" name="hobby" value="reading">閱讀
+        
+        <input type="checkbox" name="hobby" value="movie">電影
+        </div>
+    </form>
+    <input type="submit" value="送出">
+    <input type="reset" value="清除">
+    </center>
+</body>
+</html>

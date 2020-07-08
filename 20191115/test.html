@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+<style>
+    .wrapper{width: 600px;}
+    th, td{border: 1px solid rgb(0, 0, 0) ;
+    padding: 6px;}
+    table{border-collapse:collapse; width: 100%;}
+    thead tr{background: rgb(59, 125, 248);}
+    tbody tr:nth-child(2n){background: rgb(127, 174, 235);}
+    tbody tr:nth-child(2n+1){background: rgb(178, 200, 228);}
+    tfoot tr{background: rgb(164, 228, 240);}
+    .box{
+        /* padding: 25px;
+        margin: 25px;
+        border: 3.5px solid #d83f3f; */
+        background: deepskyblue;
+        /* margin-top 10px;
+        margin-left: 30px;
+        margin-right: 25px;
+        padding-top: 20px;
+        padding-left: 50px; */
+        /* margin: 10px 20px 30px 40px;
+        padding: 10px 30px 20px 10px; */
+        border-left:5px dashed #000000;font-size: 30px;
+        width: 300px;
+        height: 500px}
+        .span{
+            background: khaki;
+            margin: 100px 5px;
+            padding: 10px 10px;}
+
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+    </div>
+    <div class="box">
+            <table>
+                    <caption>time</caption>
+                    <thead>
+                    <tr>
+                        <th>hour</th>
+                        <th>minute</th>
+                        <th>secend</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>55</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>59</td>
+                        <td>59</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    </tbody>
+                    <tfoot> <tr>
+                            <!-- <td></td>
+                            <td></td> -->
+                            <td colspan="3">時間</td>
+                    </tr></tfoot>
+                </table>   
+        box
+    </div>
+    <span class="span">77777777</span>
+</body>
+</html>

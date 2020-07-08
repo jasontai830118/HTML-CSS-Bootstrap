@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-image</title>
+<style>
+.box{
+    width: 600px;
+    min-height: 400px;
+    background: lightblue;
+    margin: 10px;
+    padding: 10px;
+    line-height: 1.6;
+}
+    .border-image1{
+    border: 20px solid transparent;
+    border-image: url('frame_border.png') 30 round;
+    }
+    .border-image2{
+    border: 20px solid transparent;
+    border-image: url('frame_border.png') 30 repeat;
+    }
+    .border-image3{
+    border: 20px solid transparent;
+    border-image: url('frame_border.png') 80 stretch;
+    }
+</style>
+</head>
+<body>
+<div class="box border-image1">
+    <h1>CSS</h1>
+    <P>階層式樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、層疊樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。目前最新版本是CSS2.1，為W3C的推薦標準。CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。</P>
+</div>
+<div class="box border-image2"></div>
+<div class="box border-image3"></div>
+<div class="box"></div>
+</body>
+</html>

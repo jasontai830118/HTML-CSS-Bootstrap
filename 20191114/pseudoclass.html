@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pseudoclass</title>
+   <style>
+       a{font-size: 72px}
+       a:link{color: gold}
+       a:visited{color: green}
+       a:hover{color: hotpink}
+       a:active{color: mediumorchid}
+      input[type="checkbox"]:checked+span{color: rgb(169, 134, 240)}
+      input[type="checkbox"]+span{font-size: 28px}
+      
+   </style> 
+</head>
+<body>
+    <a href="http://google.com" target="_blank">google</a>
+    <br>
+    <a href="http://yahoo.com.tw"target="_blank">yahoo</a>
+<div>
+    <input type="checkbox" checked><span>Yes</span>
+    <input type="checkbox"><span>No</span>
+</div>
+</body>
+</html>
